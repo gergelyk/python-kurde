@@ -31,9 +31,9 @@ For more information see examples below.
 
 ## Built-Ins
 
-| Variable | Values      |
+| Variable | Value      |
 |----------|---------------|
-| `Path`   | `Path` |
+| `Path`   | `pathlib.Path` |
 | `Dict`   | `addict.Dict` |
 | `Enum`   | `simplenum.Enum` |
 | `enum`   | `simplenum` |
