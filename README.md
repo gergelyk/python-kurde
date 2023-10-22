@@ -55,6 +55,22 @@ remotes = [
 timeout = 100
 ```
 
+Renders as:
+```json
+{
+  "user": {
+    "name": "admin",
+    "password": "admin123"
+  },
+  "remotes": [
+    "192.168.0.100",
+    "192.168.0.101",
+    "192.168.0.102"
+  ],
+  "timeout": 100
+}
+```
+
 ### Advanced Example
 
 ```python
@@ -114,6 +130,40 @@ network.remotes = {f"proxy{n}": f'192.168.0.{100 + n}' for n in range(3)}
 network.remotes['localhost'] = '127.0.0.1'
 ```
 
+Renders as:
+```json
+{
+  "theme": {
+    "foreground": "black",
+    "background": "green"
+  },
+  "user": {
+    "name": "kendo",
+    "full_name": "Tom Brown",
+    "last_name": "Brown",
+    "aliases": [
+      "tommy",
+      "tbrown",
+      "brown"
+    ],
+    "nick": null
+  },
+  "network": {
+    "local": {
+      "priority": 1,
+      "name": "precision",
+      "cert_path": "/home/kendo/wrk/kurde/examples/cert.pem"
+    },
+    "remotes": {
+      "proxy0": "192.168.0.100",
+      "proxy1": "192.168.0.101",
+      "proxy2": "192.168.0.102",
+      "localhost": "127.0.0.1"
+    }
+  }
+}
+```
+
 ### Example with ROOT defined
 
 ```python
@@ -124,6 +174,19 @@ max_value = 6
 
 ROOT = Dict()
 ROOT.numbers = list(range(min_value, max_value+1))
+```
+
+Renders as:
+```json
+{
+  "numbers": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}
 ```
 
 ## Disclaimer
