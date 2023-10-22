@@ -2,6 +2,16 @@
 
 Simple configuration language based on Python.
 
+## Features
+
+- Python syntax
+- Flexible Enums
+- Easily created nested dictionaries
+- Direct addess to environment variables
+- Calling/capturing shell commands
+- Path manipulation
+- Module `re` immediately available
+
 ## Concepts
 
 Kurde is pure Python with some built-ins added for your convenience (see below).
