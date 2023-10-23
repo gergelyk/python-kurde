@@ -40,7 +40,7 @@ user.nick = None
 network = Dict()
 
 # Non-existing attributes are created on the fly.
-network.local.priority=Priority.medium
+network.local.priority = Priority.medium
 
 # Shell commands can be easily invoked.
 # Behind `cmd` we get `plumbum.local.cmd`.
