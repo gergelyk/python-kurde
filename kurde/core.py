@@ -20,13 +20,13 @@ builtins.re = re
 ROOT_NAME = 'ROOT'
 JSON_SERIALIZABLE = (type(None), int, float, bool, str, list, tuple, set, dict, Enum, Path)
 
-def serialize(script_path):
-    script_path = Path(script_path)
-    code = script_path.read_text()
-
-    os.chdir(script_path.parent)
-    glo = {'__file__': str(script_path)}
+def serialize(code, script_path):
+    glo = {}
     loc = {}
+    if script_path:
+        os.chdir(script_path.parent)
+        glo['__file__']: str(script_path)
+
     exec(code, glo, loc)
 
     if ROOT_NAME in loc:
