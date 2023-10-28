@@ -12,6 +12,14 @@ Simple configuration language based on Python.
 - Path manipulation
 - Module `re` immediately available
 
+## Installation
+
+```sh
+pip install kurde
+```
+
+Alternatively, kurde can be used from a Docker image. See Docker section below.
+
 ## Concepts
 
 Kurde is pure Python with some built-ins added for your convenience (see below).
@@ -213,3 +221,22 @@ theme = Dict(
     background = Color.green,
 )
 ```
+
+## Docker
+
+Kurde is available as a Docker [image](https://hub.docker.com/r/gergelyk/kurde).
+
+Usage examples:
+
+```sh
+# Example script
+echo "x = 123" > config.py
+
+# Providing we have a single-file configuration
+docker run -i gergelyk/kurde < config.py
+
+# Configuration that imports other files
+docker run -i -v $(pwd):/work -w /work gergelyk/kurde config.py
+```
+
+Note: Docker Engine ~24.0 required.
