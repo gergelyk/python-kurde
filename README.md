@@ -1,4 +1,7 @@
 # kurde
+![PyPI - Version](https://img.shields.io/pypi/v/kurde)
+![PyPI - License](https://img.shields.io/pypi/l/kurde)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/kurde)
 
 Simple configuration language based on Python.
 
